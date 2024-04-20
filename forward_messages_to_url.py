@@ -1,7 +1,10 @@
+
 import aiohttp
 import asyncio
 from telethon import TelegramClient, events
 from config import api_id, api_hash, endpoint_url, group_id
+import requests
+
 
 client = TelegramClient("session_name", api_id, api_hash)
 
@@ -10,17 +13,25 @@ client = TelegramClient("session_name", api_id, api_hash)
 async def handle_new_message(event):
     sender = event.sender
     message_text = event.message.text
-
-    if event.is_group and event.chat_id == group_id:
+    if event.chat_id == group_id:
         async with aiohttp.ClientSession() as session:
-            async with session.post(
-                endpoint_url, json={"sender": sender, "message": message_text}
-            ) as response:
-                if response.status != 200:
+            print(f"Sender: {sender} \n")
+            print(f"\n Message: {message_text} \n")
+
+            try:
+                response = requests.post(
+                    endpoint_url,
+                    json={
+                        "message": message_text,
+                    },
+                )
+
+                if response.status_code != 200:
                     print(
-                        f"Error: Could not send message. Response code: {response.status}"
+                        f"Error: Could not send message. Response code: {response.status_code}"
                     )
-                    return
+            except Exception as e:
+                print(f"Error: Could not send message. Exception: {e}")
 
 
 async def main():
