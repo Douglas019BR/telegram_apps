@@ -29,3 +29,7 @@ python forward_messages_to_url.py
 ```sh
 pytest
 ```
+or to more detailed results
+```sh
+pytest -svv
+```
