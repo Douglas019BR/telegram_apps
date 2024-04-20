@@ -1,4 +1,3 @@
-
 import aiohttp
 import asyncio
 from telethon import TelegramClient, events
@@ -25,7 +24,6 @@ async def handle_new_message(event):
                         "message": message_text,
                     },
                 )
-
                 if response.status_code != 200:
                     print(
                         f"Error: Could not send message. Response code: {response.status_code}"
@@ -40,5 +38,5 @@ async def main():
     await client.run_until_disconnected()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma no cover
     asyncio.run(main())
