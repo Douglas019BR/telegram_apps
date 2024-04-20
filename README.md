@@ -33,3 +33,24 @@ or to more detailed results
 ```sh
 pytest -svv
 ```
+
+
+
+## Contributing
+🚀 Join Us! We welcome contributions from everyone. Feel free to fork the project and submit your pull requests. Let's work together to make this project even better!
+
+# 🌟 How to Contribute:
+
+# Fork the project.
+Create your feature branch (git checkout -b feature/AmazingFeature).
+Commit your changes (git commit -m 'Add some AmazingFeature').
+Push to the branch (git push origin feature/AmazingFeature).
+Open a pull request.
+
+# 📌 Need Help? 
+If you have any questions or need assistance, feel free to open an issue. We're here to help!
+
+# 🙏 Thank You! 
+Thank you for your interest in contributing to the project. Your contributions are greatly appreciated.
+
+Let's make something awesome together! 💪
