@@ -23,6 +23,8 @@ jobs:
         pip install virtualenv
         virtualenv my-deploy
         source my-deploy/bin/activate
+        pwd
+        echo "###########"
         pip install --no-cache-dir -r ./requirements.txt
         pytest
         python manage.py migrate
