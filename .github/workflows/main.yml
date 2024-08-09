@@ -25,6 +25,7 @@ jobs:
         source my-deploy/bin/activate
         pwd
         echo "###########"
+        ls ../
         pip install --no-cache-dir -r ../requirements.txt
         pytest
         python manage.py migrate
