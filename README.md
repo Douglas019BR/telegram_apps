@@ -1,3 +1,13 @@
+git checkout --orphan gh-pages
+git rm -rf .
+touch index.html
+git add index.html
+git commit -m "Initial commit for GitHub Pages"
+git push origin gh-pages
+
+
+
+
 ESSA BRANCH ESTA ERRADA, SO ESTA SENDO UTILIZADA PARA TESTAR O BADGE :
 
 ![Coverage Badge](https://douglas019br.github.io/telegram_apps/coverage_badge.svg)
