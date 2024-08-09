@@ -34,8 +34,8 @@ jobs:
         echo "###########"
         tree
         echo "###########"
-        ls ${GITHUB_WORKSPACE}
-        pip install --no-cache-dir -r requirements.txt
+        ls ${GITHUB_WORKSPACE}/telegram_apps
+        pip install --no-cache-dir -r telegram_apps/requirements.txt
         pytest
         
         python manage.py migrate
