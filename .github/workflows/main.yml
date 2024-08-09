@@ -23,7 +23,7 @@ jobs:
         pip install virtualenv
         virtualenv my-deploy
         source my-deploy/bin/activate
-        pip install --no-cache-dir -r requirements.txt
+        pip install --no-cache-dir -r ./requirements.txt
         pytest
         python manage.py migrate
         COVERAGE=$(pytest --cov=. | grep -oP '\d+%' | tail -1)
