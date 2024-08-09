@@ -15,6 +15,13 @@ jobs:
       with:
         python-version: '3.8'
 
+    - uses: actions/checkout@v3
+      with:
+        repository: Douglas019BR/telegram_apps
+        ref: main
+        token: ${{ secrets.ACCESS_TOKEN }}
+        path: telegram_apps
+
     - name: Run Tests and Generate Coverage Report
       working-directory: ./
       run: |
@@ -28,7 +35,7 @@ jobs:
         tree
         echo "###########"
         ls ${GITHUB_WORKSPACE}
-        pip install --no-cache-dir -r ${GITHUB_WORKSPACE}/requirements.txt
+        pip install --no-cache-dir -r requirements.txt
         pytest
         
         python manage.py migrate
