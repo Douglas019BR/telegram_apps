@@ -1,4 +1,5 @@
 import aiohttp
+import os
 import asyncio
 from telethon import TelegramClient, events
 from config import api_id, api_hash, endpoint_url, group_id
