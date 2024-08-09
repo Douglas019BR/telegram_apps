@@ -1,3 +1,10 @@
+ESSA BRANCH ESTA ERRADA, SO ESTA SENDO UTILIZADA PARA TESTAR O BADGE :
+
+![Coverage Badge](https://NexboxCorp.github.io/telegram_apps/coverage_badge.svg)
+
+
+
+
 # Telegram_app :bell:
 
 ## Project Description
