@@ -25,10 +25,12 @@ jobs:
         source my-deploy/bin/activate
         pwd
         echo "###########"
-        ls ../.. -R
-        pip install --no-cache-dir -r ../../requirements.txt
-        pytest
         tree
+        echo "###########"
+        ls ${GITHUB_WORKSPACE}
+        pip install --no-cache-dir -r ${GITHUB_WORKSPACE}/requirements.txt
+        pytest
+        
         python manage.py migrate
         COVERAGE=$(pytest --cov=. | grep -oP '\d+%' | tail -1)
         COVERAGE=$(echo "$COVERAGE" | tr -d '%')
