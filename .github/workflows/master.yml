@@ -16,7 +16,7 @@ jobs:
         python-version: '3.8'
 
     - name: Run Tests and Generate Coverage Report
-      working-directory: ./telegram_apps
+      working-directory: ./
       run: |
         docker run -e POSTGRES_PASSWORD=senhaUserNex32 -e POSTGRES_DB=telegram_test -p 5432:5432  -d postgres
         sudo apt-get update
@@ -38,7 +38,7 @@ jobs:
 
     - name: Deploy Badge to GitHub Pages
       env:
-        GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GH_TOKEN: ${{ secrets.git a }}
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
