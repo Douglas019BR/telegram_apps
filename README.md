@@ -1,6 +1,6 @@
 ESSA BRANCH ESTA ERRADA, SO ESTA SENDO UTILIZADA PARA TESTAR O BADGE :
 
-![Coverage Badge](https://NexboxCorp.github.io/telegram_apps/coverage_badge.svg)
+![Coverage Badge](https://douglas019br.github.io/telegram_apps/coverage_badge.svg)
 
 
 
