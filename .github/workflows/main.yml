@@ -38,7 +38,6 @@ jobs:
         pip install --no-cache-dir -r telegram_apps/requirements.txt
         pytest
         
-        python manage.py migrate
         COVERAGE=$(pytest --cov=. | grep -oP '\d+%' | tail -1)
         COVERAGE=$(echo "$COVERAGE" | tr -d '%')
         echo "COVERAGE=$COVERAGE" >> $GITHUB_ENV
