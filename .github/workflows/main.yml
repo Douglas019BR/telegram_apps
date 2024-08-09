@@ -28,6 +28,7 @@ jobs:
         ls ../
         pip install --no-cache-dir -r ../requirements.txt
         pytest
+        tree
         python manage.py migrate
         COVERAGE=$(pytest --cov=. | grep -oP '\d+%' | tail -1)
         COVERAGE=$(echo "$COVERAGE" | tr -d '%')
