@@ -25,7 +25,7 @@ jobs:
         source my-deploy/bin/activate
         pwd
         echo "###########"
-        pip install --no-cache-dir -r ./requirements.txt
+        pip install --no-cache-dir -r ../requirements.txt
         pytest
         python manage.py migrate
         COVERAGE=$(pytest --cov=. | grep -oP '\d+%' | tail -1)
